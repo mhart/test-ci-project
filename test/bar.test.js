@@ -10,6 +10,7 @@ test('setup', function(t) {
 
 test('bar', function(t) {
   t.equal('baz', bar.foo());
+  throw new Error('argh...')
   t.end();
 });
 

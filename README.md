@@ -1,5 +1,3 @@
 # test-ci-project
 
-Example README
-
-With things!
+Example README... with things
