@@ -1,1 +1,5 @@
-This is a test project for testing CI builds
+# test-ci-project
+
+Example README
+
+With things!
