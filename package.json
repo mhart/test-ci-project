@@ -11,7 +11,10 @@
     "tap": "^0.7.1"
   },
   "scripts": {
-    "test": "./build.sh"
+    "test": "tap test/*.js"
+  },
+  "lambci": {
+    "cmd": "./build-go.sh"
   },
   "author": "",
   "license": "ISC"
