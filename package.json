@@ -14,7 +14,7 @@
     "test": "tap test/*.js"
   },
   "lambci": {
-    "cmd": "./build-go.sh"
+    "cmd": "./build-python.sh"
   },
   "author": "",
   "license": "ISC"

@@ -1,11 +1,9 @@
 #!/bin/bash -ex
 
-TARBALL=go1.6.2.linux-amd64.tar.gz
+VERSION=1.6.2
 
 if ! [ -d $HOME/go ]; then
-  curl -sSL https://storage.googleapis.com/golang/${TARBALL} -o /tmp/${TARBALL}
-  tar -C $HOME -xzf /tmp/${TARBALL}
-  rm -f /tmp/${TARBALL}
+  curl -sSL https://storage.googleapis.com/golang/go${VERSION}.linux-amd64.tar.gz | tar -C $HOME -xz
 fi
 
 export GOROOT=$HOME/go
@@ -23,3 +21,4 @@ export GOPATH=$PWD
 go get github.com/bmizerany/assert
 go get github.com/mrb/hob
 go test
+
