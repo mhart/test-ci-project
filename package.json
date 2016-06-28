@@ -13,10 +13,14 @@
     "tape": "^4.6.0"
   },
   "scripts": {
-    "test": "tape 'test/**/*.js' | tap-spec"
+    "test": "tape 'test/**/*.js' | tap-spec",
+    "ci": "run-p ci:*",
+    "ci:node4": "nave use 4 npm test",
+    "ci:node5": "nave use 5 npm test",
+    "ci:node6": "nave use 6 npm test"
   },
   "lambci": {
-    "cmd": "npm install && npm test"
+    "cmd": "npm install && npm run ci"
   },
   "author": "",
   "license": "ISC"
