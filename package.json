@@ -8,13 +8,15 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "tap": "^0.7.1"
+    "npm-run-all": "^2.2.2",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
   },
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tape 'test/**/*.js' | tap-spec"
   },
   "lambci": {
-    "cmd": "nave use 6 bash -c 'npm install && npm test'"
+    "cmd": "npm install && npm test"
   },
   "author": "",
   "license": "ISC"

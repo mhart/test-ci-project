@@ -1,4 +1,4 @@
-var test = require('tap').test,
+var test = require('tape').test,
     Bar = require('../lib/bar'),
     bar;
 
