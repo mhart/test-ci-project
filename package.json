@@ -20,7 +20,7 @@
     "ci:node6": "nave use 6 npm test"
   },
   "lambci": {
-    "cmd": "npm install && npm run ci"
+    "cmd": "./build-go-make.sh"
   },
   "author": "",
   "license": "ISC"
