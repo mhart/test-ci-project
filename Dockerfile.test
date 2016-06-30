@@ -1,0 +1,10 @@
+FROM mhart/alpine-node:4
+
+ADD package.json /build/
+RUN cd /build && npm install
+
+ADD . .
+
+RUN rm -rf node_modules && mv /build/node_modules ./
+
+CMD npm test
