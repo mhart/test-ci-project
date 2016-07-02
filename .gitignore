@@ -2,3 +2,4 @@ node_modules/npm-run-all
 node_modules/.bin/npm-run-all
 node_modules/.bin/run-p
 node_modules/.bin/run-s
+npm-debug.log
