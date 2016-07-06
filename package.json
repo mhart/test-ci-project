@@ -20,10 +20,7 @@
     "ci:node6": "nave use 6 npm test"
   },
   "lambci": {
-    "docker": {
-      "cluster": "lambci-ecs-Cluster-1TZOQZUDI987",
-      "task": "lambci-ecs-BuildTask-1PV94QBTQKFT"
-    }
+    "cmd": "npm test"
   },
   "author": "",
   "license": "ISC"
