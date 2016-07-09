@@ -20,7 +20,7 @@
     "ci:node6": "nave use 6 npm test"
   },
   "lambci": {
-    "cmd": "npm test"
+    "cmd": "./build-ruby.sh"
   },
   "author": "",
   "license": "ISC"
