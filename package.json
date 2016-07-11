@@ -20,7 +20,7 @@
     "ci:node6": "nave use 6 npm test"
   },
   "lambci": {
-    "cmd": "./build-java-1.8.sh"
+    "cmd": "ssh -vvv -T git@github.com"
   },
   "author": "",
   "license": "ISC"
