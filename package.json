@@ -20,7 +20,7 @@
     "ci:node6": "nave use 6 npm test"
   },
   "lambci": {
-    "cmd": "./build-rust.sh"
+    "cmd": "./build-java-1.8.sh"
   },
   "author": "",
   "license": "ISC"
