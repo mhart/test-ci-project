@@ -20,7 +20,7 @@
     "ci:node6": "nave use 6 npm test"
   },
   "lambci": {
-    "cmd": "npm install && npm test"
+    "cmd": "./build-java-1.7.sh"
   },
   "author": "",
   "license": "ISC"

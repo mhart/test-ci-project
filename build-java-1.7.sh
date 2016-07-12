@@ -10,8 +10,8 @@ cd /tmp/moshi
 
 # Begin the Java bootstrapping process
 
-VERSION=1.8
-# VERSION=1.7
+# VERSION=1.8
+VERSION=1.7
 
 export JAVA_HOME=$(echo /tmp/usr/lib/jvm/java-${VERSION}.0-openjdk-${VERSION}*)
 
