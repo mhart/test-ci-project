@@ -20,7 +20,7 @@
     "ci:node6": "nave use 6 npm test"
   },
   "lambci": {
-    "cmd": "git clone --template=/tmp/lambci/home/.npm/_git-remotes/_templates --mirror https://github.com/uberVU/Sinon.JS.git /tmp/lambci/home/.npm/_git-remotes/https-github-com-uberVU-Sinon-JS-git-5ff91d4d"
+    "cmd": "npm install && npm test"
   },
   "author": "",
   "license": "ISC"
