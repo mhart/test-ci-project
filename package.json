@@ -17,10 +17,11 @@
     "ci": "run-p ci:*",
     "ci:node4": "nave use 4 npm test",
     "ci:node5": "nave use 5 npm test",
-    "ci:node6": "nave use 6 npm test"
+    "ci:node6": "nave use 6 npm test",
+    "phantomjs:test": "phantomjs ./phantomwebintro.js"
   },
   "lambci": {
-    "cmd": "./build-rust.sh"
+    "cmd": "npm install phantomjs-prebuilt && npm run phantomjs:test"
   },
   "author": "",
   "license": "ISC"
