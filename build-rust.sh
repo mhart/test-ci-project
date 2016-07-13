@@ -10,30 +10,16 @@ cd /tmp/mio
 
 # Begin the Rust bootstrapping process
 
-export CARGO_HOME=$HOME/.cargo
-export MULTIRUST_HOME=$HOME/.multirust
-export RUSTUP_HOME=$HOME/.multirust/rustup
+curl -sSL https://lambci.s3.amazonaws.com/binaries/rust-1.10.0-rustup.tgz | tar -xz -C ~
 
-curl https://sh.rustup.rs -sSf | sh -s -- -y
-
-# Remove Rust docs to save space
-rm -rf $RUSTUP_HOME/toolchains/stable-x86_64-unknown-linux-gnu/share
-
-# Create symlinks from duped libs to save space
-cd $RUSTUP_HOME/toolchains/stable-x86_64-unknown-linux-gnu/lib
-for file in ./*; do
-  if [ -f rustlib/x86_64-unknown-linux-gnu/lib/$file ]; then
-    rm $file
-    ln -s rustlib/x86_64-unknown-linux-gnu/lib/$file
-  fi
-done
-cd -
-
-export PATH=$HOME/.cargo/bin:$PATH
+export CARGO_HOME=~/.cargo
+export MULTIRUST_HOME=~/.multirust
+export RUSTUP_HOME=~/.multirust/rustup
+export PATH=$CARGO_HOME/bin:$PATH
 
 # Begin the GCC bootstrapping process
 
-curl -sSL https://lambci.s3.amazonaws.com/binaries/gcc-4.8.5.tgz | tar -C /tmp -xz
+curl -sSL https://lambci.s3.amazonaws.com/binaries/gcc-4.8.5.tgz | tar -xz -C /tmp
 
 export PATH=/tmp/bin:/tmp/sbin:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib64/node-v4.3.x/lib:/tmp/lib:/tmp/lib64:/lib64:/usr/lib64:/var/runtime:/var/task:/var/task/lib
@@ -46,4 +32,3 @@ export LIBRARY_PATH=/tmp/lib
 cargo build --verbose --color=always
 cargo test --verbose --color=always
 
-du -k /tmp | sort -n
