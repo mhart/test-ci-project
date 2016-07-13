@@ -3,9 +3,9 @@
 # Clone an example Rust repo
 # This step obviously won't be necessary if you're building a Rust repo with LambCI,
 # because you'll already be in the cloned repo directory
-rm -rf /tmp/bitflags
-git clone --depth 1 https://github.com/rust-lang-nursery/bitflags /tmp/bitflags
-cd /tmp/bitflags
+rm -rf /tmp/mio
+git clone --depth 1 https://github.com/carllerche/mio /tmp/mio
+cd /tmp/mio
 
 
 # Begin the Rust bootstrapping process
@@ -18,6 +18,16 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 # Remove Rust docs to save space
 rm -rf $RUSTUP_HOME/toolchains/stable-x86_64-unknown-linux-gnu/share
+
+# Create symlinks from duped libs to save space
+cd $RUSTUP_HOME/toolchains/stable-x86_64-unknown-linux-gnu/lib
+for file in ./*; do
+  if [ -f rustlib/x86_64-unknown-linux-gnu/lib/$file ]; then
+    rm $file
+    ln -s rustlib/x86_64-unknown-linux-gnu/lib/$file
+  fi
+done
+cd -
 
 export PATH=$HOME/.cargo/bin:$PATH
 
@@ -36,3 +46,4 @@ export LIBRARY_PATH=/tmp/lib
 cargo build --verbose --color=always
 cargo test --verbose --color=always
 
+du -k /tmp | sort -n
