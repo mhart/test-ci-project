@@ -8,8 +8,6 @@ git clone --depth 1 https://github.com/pytest-dev/pytest /tmp/pytest
 cd /tmp/pytest
 
 
-# Now we can run our project's install and test steps
-
-pip install --user tox
-tox --recreate -e py27
+# You could just put this in your `cmd` config property
+pip install --user tox && tox --recreate -e py27
 
