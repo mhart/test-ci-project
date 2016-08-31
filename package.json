@@ -21,7 +21,7 @@
     "phantomjs:test": "phantomjs ./phantomwebintro.js"
   },
   "lambci": {
-    "cmd": "npm test"
+    "cmd": "./build-go.sh"
   },
   "author": "",
   "license": "ISC"
