@@ -1,0 +1,9 @@
+{
+  "cmd": "echo toplevel && sleep 1",
+  "branches": {
+    "test-branch": {
+      "build": true,
+      "cmd": "echo branchlevel && sleep 1"
+    }
+  }
+}

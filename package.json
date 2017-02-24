@@ -20,15 +20,6 @@
     "ci:node6": "nave use 6 npm test",
     "phantomjs:test": "phantomjs ./phantomwebintro.js"
   },
-  "lambci": {
-    "cmd": "echo toplevel && sleep 1",
-    "branches": {
-      "test-branch": {
-        "build": true,
-        "cmd": "echo branchlevel && sleep 1"
-      }
-    }
-  },
   "author": "",
   "license": "ISC"
 }
