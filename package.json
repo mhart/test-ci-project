@@ -21,7 +21,13 @@
     "phantomjs:test": "phantomjs ./phantomwebintro.js"
   },
   "lambci": {
-    "cmd": "./build-ssh.sh"
+    "cmd": "echo toplevel && sleep 1",
+    "branches": {
+      "test-branch": {
+        "build": true,
+        "cmd": "echo branchlevel && sleep 1"
+      }
+    }
   },
   "author": "",
   "license": "ISC"
