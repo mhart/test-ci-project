@@ -9,4 +9,4 @@ cd /tmp/http-2
 
 
 # You could just put this in your `cmd` config property
-. ~/init/ruby && bundle install && bundle exec thor spec
+. ~/init/ruby && bundle install && bundle exec rake
