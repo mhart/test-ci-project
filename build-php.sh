@@ -9,5 +9,7 @@ cd /tmp/chronos
 
 find ~ -type l -exec ls -l {} \;
 
+export PHPENV_DEBUG=1
+
 # You could just put this in your `cmd` config property
 . ~/init/php && composer install -n --prefer-dist && vendor/bin/phpunit
