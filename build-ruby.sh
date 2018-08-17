@@ -8,6 +8,8 @@ git clone --depth 1 https://github.com/wvanbergen/chunky_png /tmp/chunky_png
 cd /tmp/chunky_png
 
 
+export LD_LIBRARY_PATH=$HOME/usr/lib64:$LD_LIBRARY_PATH
+
 # You could just put this in your `cmd` config property
 . ~/init/ruby && bundle install && bundle exec rake
 
