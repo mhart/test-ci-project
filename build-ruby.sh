@@ -3,10 +3,10 @@
 # Clone an example Ruby repo
 # This step obviously won't be necessary if you're building a Ruby repo with LambCI,
 # because you'll already be in the cloned repo directory
-rm -rf /tmp/chunky_png
-git clone --depth 1 https://github.com/wvanbergen/chunky_png /tmp/chunky_png
-cd /tmp/chunky_png
+rm -rf /tmp/json
+git clone --depth 1 https://github.com/flori/json /tmp/json
+cd /tmp/json
 
 
 # You could just put this in your `cmd` config property
-. ~/init/ruby 2.0.0-p648 && bundle install && bundle exec rake
+. ~/init/ruby && bundle install && bundle exec rake
