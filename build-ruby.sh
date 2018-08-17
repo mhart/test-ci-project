@@ -9,4 +9,4 @@ cd /tmp/chunky_png
 
 
 # You could just put this in your `cmd` config property
-. ~/init/ruby 2.3.7 && bundle install && bundle exec rake
+. ~/init/ruby 2.1.10 && bundle install && bundle exec rake
