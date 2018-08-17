@@ -8,8 +8,5 @@ git clone --depth 1 https://github.com/laravel/framework /tmp/laravel
 cd /tmp/laravel
 
 
-export PHPENV_DEBUG=1
-export PHPENV_VERSION=7.2.9
-
 # You could just put this in your `cmd` config property
 . ~/init/php && composer install -n --prefer-dist && vendor/bin/phpunit
