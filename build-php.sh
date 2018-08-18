@@ -7,7 +7,7 @@ rm -rf /tmp/chronos
 git clone --depth 1 https://github.com/cakephp/chronos /tmp/chronos
 cd /tmp/chronos
 
-ls -la /dev/fd
+ls -la /dev
 
 # You could just put this in your `cmd` config property
 . ~/init/php && composer install -n --prefer-dist && vendor/bin/phpunit
