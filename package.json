@@ -1,7 +1,7 @@
 {
   "name": "test-ci-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Trigger CI build",
   "main": "index.js",
   "directories": {
     "test": "test"
