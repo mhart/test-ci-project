@@ -21,7 +21,7 @@
     "phantomjs:test": "phantomjs ./phantomwebintro.js"
   },
   "lambci": {
-    "cmd": "./build-rust.sh"
+    "cmd": "./build-ruby.sh"
   },
   "author": "",
   "license": "ISC"
