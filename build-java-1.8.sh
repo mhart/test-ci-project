@@ -4,7 +4,7 @@
 # This step obviously won't be necessary if you're building a Java repo with LambCI,
 # because you'll already be in the cloned repo directory
 rm -rf /tmp/moshi
-git clone --depth 1 https://github.com/square/moshi /tmp/moshi
+git clone -b moshi-parent-1.6.0 --depth 1 https://github.com/square/moshi /tmp/moshi
 cd /tmp/moshi
 
 
