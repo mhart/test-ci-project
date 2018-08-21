@@ -10,4 +10,3 @@ cd /tmp/pytest
 
 # You could just put this in your `cmd` config property
 pip install --user tox && tox --recreate -e py27
-
