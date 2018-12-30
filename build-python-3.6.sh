@@ -9,7 +9,7 @@ cd /tmp/pendulum
 
 
 # You could just put this in your `cmd` config property
-. ~/init/python
+. ~/init/python 3.6.8
 curl -sSL https://raw.githubusercontent.com/sdispater/poetry/0.12.10/get-poetry.py | POETRY_VERSION=0.12.10 python
 pyenv rehash
 source $HOME/.poetry/env
