@@ -11,4 +11,6 @@ cd /tmp/pendulum
 # You could just put this in your `cmd` config property
 . ~/init/python
 curl -sSL https://raw.githubusercontent.com/sdispater/poetry/0.12.10/get-poetry.py | POETRY_VERSION=0.12.10 python
-pyenv rehash && poetry install -v && poetry build -v && poetry run pytest tests/ -W ignore
+pyenv rehash
+source $HOME/.poetry/env
+poetry install -v && poetry build -v && poetry run pytest tests/ -W ignore
