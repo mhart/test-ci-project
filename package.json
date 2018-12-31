@@ -21,7 +21,7 @@
     "phantomjs:test": "phantomjs ./phantomwebintro.js"
   },
   "lambci": {
-    "cmd": "npm install && npm test"
+    "cmd": "npm test"
   },
   "author": "",
   "license": "ISC"
