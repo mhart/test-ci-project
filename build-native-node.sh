@@ -3,11 +3,11 @@
 # Clone an example native Node.js repo
 # This step obviously won't be necessary if you're building a native Node.js repo with LambCI,
 # because you'll already be in the cloned repo directory
-rm -rf /tmp/hiredis-node
-git clone --depth 1 https://github.com/redis/hiredis-node /tmp/hiredis-node
-cd /tmp/hiredis-node
+rm -rf /tmp/node.bcrypt.js
+git clone --depth 1 https://github.com/kelektiv/node.bcrypt.js -b v3.0.7 /tmp/node.bcrypt.js
+cd /tmp/node.bcrypt.js
 
 
-# This repo has submodules, so init them before installing and testing
-. ~/init/gcc && git submodule update --init --recursive && npm install && npm test
+# We need to install gcc before we test
+. ~/init/gcc && npm test
 
