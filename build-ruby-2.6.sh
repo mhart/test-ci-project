@@ -7,6 +7,7 @@ rm -rf /tmp/diff-lcs
 git clone -b v1.3 --depth 1 https://github.com/halostatue/diff-lcs /tmp/diff-lcs
 cd /tmp/diff-lcs
 
+
 # Need this because of the native json extension
 . ~/init/gcc
 
