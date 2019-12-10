@@ -8,4 +8,4 @@ git clone -b 1.2.3 --depth 1 https://github.com/cakephp/chronos /tmp/chronos
 cd /tmp/chronos
 
 # You could just put this in your `cmd` config property
-. ~/init/php 7.1.27 && composer install -n --prefer-dist && vendor/bin/phpunit
+. ~/init/php 7.3.12 && composer install -n --prefer-dist && vendor/bin/phpunit
