@@ -9,4 +9,4 @@ cd /tmp/diff-lcs
 
 
 # You could just put this in your `cmd` config property
-. ~/init/ruby 2.6.0 && bundle install && bundle exec rake
+. ~/init/ruby 2.5.7 && bundle install && bundle exec rake
