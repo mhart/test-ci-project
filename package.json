@@ -8,20 +8,20 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "npm-run-all": "^2.2.2",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.6.0"
+    "npm-run-all": "^4.1.5",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
   },
   "scripts": {
     "test": "tape 'test/**/*.js' | tap-spec",
-    "ci": "run-p ci:*",
-    "ci:node4": "nave use 4 npm test",
-    "ci:node5": "nave use 5 npm test",
-    "ci:node6": "nave use 6 npm test",
+    "ci-all": "run-p ci:*",
+    "ci:node8": "nave use 8 npm test",
+    "ci:node10": "nave use 10 npm test",
+    "ci:node12": "nave use 12 npm test",
     "phantomjs:test": "phantomjs ./phantomwebintro.js"
   },
   "lambci": {
-    "cmd": "./build-php-7.3.sh"
+    "cmd": "npm ci && npm run ci-all"
   },
   "author": "",
   "license": "ISC"

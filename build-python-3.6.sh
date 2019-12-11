@@ -12,5 +12,5 @@ cd /tmp/pendulum
 . ~/init/python 3.6.9
 curl -sSL https://raw.githubusercontent.com/sdispater/poetry/1.0.0b9/get-poetry.py | POETRY_VERSION=1.0.0b9 python
 pyenv rehash
-. $HOME/.poetry/env
+. ~/.poetry/env
 poetry install -v && poetry build -v && poetry run pytest tests/ -W ignore
