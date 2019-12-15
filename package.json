@@ -21,7 +21,7 @@
     "phantomjs:test": "phantomjs ./phantomwebintro.js"
   },
   "lambci": {
-    "cmd": "npm ci && npm run ci-all"
+    "cmd": "./build-native-node-inbuilt.sh"
   },
   "author": "",
   "license": "ISC"
