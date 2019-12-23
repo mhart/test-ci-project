@@ -9,5 +9,5 @@ cd /tmp/moshi
 
 
 # You could just put this in your `cmd` config property
-. ~/init/java && mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V && mvn test
+. ~/init/java 1.8.0 && mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V && mvn test
 
