@@ -21,7 +21,7 @@
     "phantomjs:test": "phantomjs ./phantomwebintro.js"
   },
   "lambci": {
-    "cmd": "./build-java-1.8.0.sh"
+    "cmd": "./build-native-node-inbuilt.sh"
   },
   "author": "",
   "license": "ISC"
